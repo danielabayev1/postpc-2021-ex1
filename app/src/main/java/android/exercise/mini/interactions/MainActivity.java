@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     findViewById(R.id.buttonOpenEditScreen).setOnClickListener(
+            //gets me to another activity page "EditTitleActivity"
       v -> startActivity(new Intent(MainActivity.this, EditTitleActivity.class))
     );
   }
