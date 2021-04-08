@@ -90,7 +90,7 @@ public class EditTitleActivity extends AppCompatActivity {
             textViewTitle.setText(text);
             editTextTitle.setVisibility(View.GONE);
             textViewTitle.setVisibility(View.VISIBLE);
-            isEditing=false;
+            this.isEditing=false;
         });
     }
 
@@ -118,7 +118,7 @@ public class EditTitleActivity extends AppCompatActivity {
         TextView textViewTitle = findViewById(R.id.textViewPageTitle);
         EditText editTextTitle = findViewById(R.id.editTextPageTitle);
 
-        if (isEditing) {
+        if (this.isEditing) {
             String text=textViewTitle.getText().toString();
             editTextTitle.setText(text);
             editTextTitle.setVisibility(View.GONE);
@@ -128,7 +128,7 @@ public class EditTitleActivity extends AppCompatActivity {
                 fabStartEdit.setVisibility(View.VISIBLE);
                 fabStartEdit.animate().alpha(1f).start();
             }).start();
-            isEditing=false;
+            this.isEditing=false;
         }
         else{
             super.onBackPressed();
