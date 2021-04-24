@@ -1,7 +1,9 @@
 package android.exercise.mini.interactions;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -91,6 +93,10 @@ public class EditTitleActivity extends AppCompatActivity {
             editTextTitle.setVisibility(View.GONE);
             textViewTitle.setVisibility(View.VISIBLE);
             this.isEditing=false;
+            //closing keyboard
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(fabEditDone.getWindowToken(),0);
+
         });
     }
 
